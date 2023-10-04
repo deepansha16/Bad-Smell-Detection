@@ -1,4 +1,13 @@
-# Project Bad smells
+# Bad Smell Detection: Using ontologies to find bad smells in code
+
+
+Types of bad smells (examples:)
+Bad smell groups:
+• Bloaters
+• Object-Orientation Abusers
+• Change Preventers
+• Dispensables
+• Couplers
 
 ## Ontology Creator
 `python onto_creator.py tree.py`
