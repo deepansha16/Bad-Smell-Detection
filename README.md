@@ -29,3 +29,24 @@ The project addresses the following types of bad smells:
    - Encode bad smells as Sparql queries to automatically detect them within the code.
 
 ## How to Run
+
+## Ontology Creator
+`python3 onto-creator.py tree.py`
+
+## Run ontology test
+`python3 -m pytest -s onto-creator.py`
+
+## Invid Creator
+`python3 individ_creator.py`
+
+## Run individ test
+`python3 -m pytest -s individ_creator.py`
+
+## Bad smells 
+`python3 bad_smells.py`
+
+## Run bad smells test
+`python3 -m pytest -s bad_smells.py`
+
+## Save the result in .txt file
+`python3 bad_smells.py > result.txt`
