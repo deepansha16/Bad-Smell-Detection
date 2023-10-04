@@ -1,0 +1,460 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/tree.owl"
+         xmlns="http://example.org/tree.owl#">
+
+<owl:Ontology rdf:about="http://example.org/tree.owl"/>
+
+<owl:ObjectProperty rdf:about="#body"/>
+
+<owl:ObjectProperty rdf:about="#parameters"/>
+
+<owl:DatatypeProperty rdf:about="#package"/>
+
+<owl:DatatypeProperty rdf:about="#imports"/>
+
+<owl:DatatypeProperty rdf:about="#types"/>
+
+<owl:DatatypeProperty rdf:about="#path"/>
+
+<owl:DatatypeProperty rdf:about="#static"/>
+
+<owl:DatatypeProperty rdf:about="#wildcard"/>
+
+<owl:DatatypeProperty rdf:about="#documentation"/>
+
+<owl:DatatypeProperty rdf:about="#modifiers"/>
+
+<owl:DatatypeProperty rdf:about="#annotations"/>
+
+<owl:DatatypeProperty rdf:about="#jname"/>
+
+<owl:DatatypeProperty rdf:about="#type_parameters"/>
+
+<owl:DatatypeProperty rdf:about="#extends"/>
+
+<owl:DatatypeProperty rdf:about="#implements"/>
+
+<owl:DatatypeProperty rdf:about="#dimensions"/>
+
+<owl:DatatypeProperty rdf:about="#arguments"/>
+
+<owl:DatatypeProperty rdf:about="#sub_type"/>
+
+<owl:DatatypeProperty rdf:about="#type"/>
+
+<owl:DatatypeProperty rdf:about="#pattern_type"/>
+
+<owl:DatatypeProperty rdf:about="#element"/>
+
+<owl:DatatypeProperty rdf:about="#value"/>
+
+<owl:DatatypeProperty rdf:about="#values"/>
+
+<owl:DatatypeProperty rdf:about="#return_type"/>
+
+<owl:DatatypeProperty rdf:about="#throws"/>
+
+<owl:DatatypeProperty rdf:about="#declarators"/>
+
+<owl:DatatypeProperty rdf:about="#initializers"/>
+
+<owl:DatatypeProperty rdf:about="#initializer"/>
+
+<owl:DatatypeProperty rdf:about="#varargs"/>
+
+<owl:DatatypeProperty rdf:about="#label"/>
+
+<owl:DatatypeProperty rdf:about="#condition"/>
+
+<owl:DatatypeProperty rdf:about="#then_statement"/>
+
+<owl:DatatypeProperty rdf:about="#else_statement"/>
+
+<owl:DatatypeProperty rdf:about="#control"/>
+
+<owl:DatatypeProperty rdf:about="#goto"/>
+
+<owl:DatatypeProperty rdf:about="#expression"/>
+
+<owl:DatatypeProperty rdf:about="#lock"/>
+
+<owl:DatatypeProperty rdf:about="#block"/>
+
+<owl:DatatypeProperty rdf:about="#resources"/>
+
+<owl:DatatypeProperty rdf:about="#catches"/>
+
+<owl:DatatypeProperty rdf:about="#finally_block"/>
+
+<owl:DatatypeProperty rdf:about="#cases"/>
+
+<owl:DatatypeProperty rdf:about="#statements"/>
+
+<owl:DatatypeProperty rdf:about="#parameter"/>
+
+<owl:DatatypeProperty rdf:about="#case"/>
+
+<owl:DatatypeProperty rdf:about="#init"/>
+
+<owl:DatatypeProperty rdf:about="#update"/>
+
+<owl:DatatypeProperty rdf:about="#var"/>
+
+<owl:DatatypeProperty rdf:about="#iterable"/>
+
+<owl:DatatypeProperty rdf:about="#expressionl"/>
+
+<owl:DatatypeProperty rdf:about="#if_true"/>
+
+<owl:DatatypeProperty rdf:about="#if_false"/>
+
+<owl:DatatypeProperty rdf:about="#operator"/>
+
+<owl:DatatypeProperty rdf:about="#operandl"/>
+
+<owl:DatatypeProperty rdf:about="#operandr"/>
+
+<owl:DatatypeProperty rdf:about="#method"/>
+
+<owl:DatatypeProperty rdf:about="#type_arguments"/>
+
+<owl:DatatypeProperty rdf:about="#prefix_operators"/>
+
+<owl:DatatypeProperty rdf:about="#postfix_operators"/>
+
+<owl:DatatypeProperty rdf:about="#qualifier"/>
+
+<owl:DatatypeProperty rdf:about="#selectors"/>
+
+<owl:DatatypeProperty rdf:about="#member"/>
+
+<owl:DatatypeProperty rdf:about="#index"/>
+
+<owl:DatatypeProperty rdf:about="#constructor_type_arguments"/>
+
+<owl:DatatypeProperty rdf:about="#constants"/>
+
+<owl:DatatypeProperty rdf:about="#declarations"/>
+
+<owl:DatatypeProperty rdf:about="#default"/>
+
+<owl:Class rdf:about="#CompilationUnit">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Import">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Documented">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Declaration">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TypeDeclaration">
+  <rdfs:subClassOf rdf:resource="#Declaration"/>
+  <rdfs:subClassOf rdf:resource="#Documented"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PackageDeclaration">
+  <rdfs:subClassOf rdf:resource="#Declaration"/>
+  <rdfs:subClassOf rdf:resource="#Documented"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ClassDeclaration">
+  <rdfs:subClassOf rdf:resource="#TypeDeclaration"/>
+</owl:Class>
+
+<owl:Class rdf:about="#EnumDeclaration">
+  <rdfs:subClassOf rdf:resource="#TypeDeclaration"/>
+</owl:Class>
+
+<owl:Class rdf:about="#InterfaceDeclaration">
+  <rdfs:subClassOf rdf:resource="#TypeDeclaration"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AnnotationDeclaration">
+  <rdfs:subClassOf rdf:resource="#TypeDeclaration"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Type">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BasicType">
+  <rdfs:subClassOf rdf:resource="#Type"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ReferenceType">
+  <rdfs:subClassOf rdf:resource="#Type"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TypeArgument">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TypeParameter">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Annotation">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ElementValuePair">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ElementArrayValue">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Member">
+  <rdfs:subClassOf rdf:resource="#Documented"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MethodDeclaration">
+  <rdfs:subClassOf rdf:resource="#Member"/>
+  <rdfs:subClassOf rdf:resource="#Declaration"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FieldDeclaration">
+  <rdfs:subClassOf rdf:resource="#Member"/>
+  <rdfs:subClassOf rdf:resource="#Declaration"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ConstructorDeclaration">
+  <rdfs:subClassOf rdf:resource="#Declaration"/>
+  <rdfs:subClassOf rdf:resource="#Documented"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ConstantDeclaration">
+  <rdfs:subClassOf rdf:resource="#FieldDeclaration"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ArrayInitializer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#VariableDeclaration">
+  <rdfs:subClassOf rdf:resource="#Declaration"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LocalVariableDeclaration">
+  <rdfs:subClassOf rdf:resource="#VariableDeclaration"/>
+</owl:Class>
+
+<owl:Class rdf:about="#VariableDeclarator">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FormalParameter">
+  <rdfs:subClassOf rdf:resource="#Declaration"/>
+</owl:Class>
+
+<owl:Class rdf:about="#InferredFormalParameter">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Statement">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#IfStatement">
+  <rdfs:subClassOf rdf:resource="#Statement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#WhileStatement">
+  <rdfs:subClassOf rdf:resource="#Statement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DoStatement">
+  <rdfs:subClassOf rdf:resource="#Statement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ForStatement">
+  <rdfs:subClassOf rdf:resource="#Statement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AssertStatement">
+  <rdfs:subClassOf rdf:resource="#Statement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BreakStatement">
+  <rdfs:subClassOf rdf:resource="#Statement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ContinueStatement">
+  <rdfs:subClassOf rdf:resource="#Statement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ReturnStatement">
+  <rdfs:subClassOf rdf:resource="#Statement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ThrowStatement">
+  <rdfs:subClassOf rdf:resource="#Statement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SynchronizedStatement">
+  <rdfs:subClassOf rdf:resource="#Statement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TryStatement">
+  <rdfs:subClassOf rdf:resource="#Statement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SwitchStatement">
+  <rdfs:subClassOf rdf:resource="#Statement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BlockStatement">
+  <rdfs:subClassOf rdf:resource="#Statement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#StatementExpression">
+  <rdfs:subClassOf rdf:resource="#Statement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TryResource">
+  <rdfs:subClassOf rdf:resource="#Declaration"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CatchClause">
+  <rdfs:subClassOf rdf:resource="#Statement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CatchClauseParameter">
+  <rdfs:subClassOf rdf:resource="#Declaration"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SwitchStatementCase">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ForControl">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#EnhancedForControl">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Expression">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Assignment">
+  <rdfs:subClassOf rdf:resource="#Expression"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TernaryExpression">
+  <rdfs:subClassOf rdf:resource="#Expression"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BinaryOperation">
+  <rdfs:subClassOf rdf:resource="#Expression"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cast">
+  <rdfs:subClassOf rdf:resource="#Expression"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MethodReference">
+  <rdfs:subClassOf rdf:resource="#Expression"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LambdaExpression">
+  <rdfs:subClassOf rdf:resource="#Expression"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Primary">
+  <rdfs:subClassOf rdf:resource="#Expression"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Literal">
+  <rdfs:subClassOf rdf:resource="#Primary"/>
+</owl:Class>
+
+<owl:Class rdf:about="#This">
+  <rdfs:subClassOf rdf:resource="#Primary"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MemberReference">
+  <rdfs:subClassOf rdf:resource="#Primary"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Invocation">
+  <rdfs:subClassOf rdf:resource="#Primary"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ExplicitConstructorInvocation">
+  <rdfs:subClassOf rdf:resource="#Invocation"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SuperConstructorInvocation">
+  <rdfs:subClassOf rdf:resource="#Invocation"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MethodInvocation">
+  <rdfs:subClassOf rdf:resource="#Invocation"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SuperMethodInvocation">
+  <rdfs:subClassOf rdf:resource="#Invocation"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SuperMemberReference">
+  <rdfs:subClassOf rdf:resource="#Primary"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ArraySelector">
+  <rdfs:subClassOf rdf:resource="#Expression"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ClassReference">
+  <rdfs:subClassOf rdf:resource="#Primary"/>
+</owl:Class>
+
+<owl:Class rdf:about="#VoidClassReference">
+  <rdfs:subClassOf rdf:resource="#ClassReference"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Creator">
+  <rdfs:subClassOf rdf:resource="#Primary"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ArrayCreator">
+  <rdfs:subClassOf rdf:resource="#Creator"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ClassCreator">
+  <rdfs:subClassOf rdf:resource="#Creator"/>
+</owl:Class>
+
+<owl:Class rdf:about="#InnerClassCreator">
+  <rdfs:subClassOf rdf:resource="#Creator"/>
+</owl:Class>
+
+<owl:Class rdf:about="#EnumBody">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#EnumConstantDeclaration">
+  <rdfs:subClassOf rdf:resource="#Declaration"/>
+  <rdfs:subClassOf rdf:resource="#Documented"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AnnotationMethod">
+  <rdfs:subClassOf rdf:resource="#Declaration"/>
+</owl:Class>
+
+
+</rdf:RDF>
