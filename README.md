@@ -1,31 +1,31 @@
-# Bad Smell Detection: Using ontologies to find bad smells in code
+# Bad Smell Detection: Using Ontologies to Find Bad Smells in Code
 
+## Overview
 
-Types of bad smells (examples:)
-Bad smell groups:
-• Bloaters
-• Object-Orientation Abusers
-• Change Preventers
-• Dispensables
-• Couplers
+This project focuses on utilizing ontologies to identify and detect various types of bad smells in code. Bad smells are indicators of potential issues in software code, and this project aims to automate their detection using semantic web technologies and Sparql queries.
 
-## Ontology Creator
-`python onto_creator.py tree.py`
+## Bad Smell Types
 
-## Run ontology test
-`python -m pytest -s onto_creator.py`
+The project addresses the following types of bad smells:
 
-## Invid Creator
-`python individ_creator.py`
+- **Bloaters**
+- **Object-Orientation Abusers**
+- **Change Preventers**
+- **Dispensables**
+- **Couplers**
 
-## Run individ test
-`python -m pytest -s individ_creator.py`
+## Project Components
 
-## Bad smells 
-`python bad_smells.py`
+1. **Create Ontology**: 
+   - Create an ontology for Java entities that serves as the foundation for detecting bad smells.
 
-## Run bad smells test
-`python -m pytest -s bad_smells.py`
+2. **Populate Ontology**:
+   - Populate the ontology with instances, including classes and class members.
 
-## Save the result in .txt file
-`python bad_smells.py > result.txt`
+3. **Populate Ontology (Statements and Method Parameters)**:
+   - Further populate the ontology with instances related to statements and method parameters.
+
+4. **Find Bad Smells**:
+   - Encode bad smells as Sparql queries to automatically detect them within the code.
+
+## How to Run
