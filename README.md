@@ -36,7 +36,7 @@ The project addresses the following types of bad smells:
 ## Run ontology test
 `python3 -m pytest -s onto-creator.py`
 
-## Invid Creator
+## Individ Creator
 `python3 individ_creator.py`
 
 ## Run individ test
