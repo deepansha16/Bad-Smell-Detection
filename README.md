@@ -4,6 +4,16 @@
 
 This project focuses on utilizing ontologies to identify and detect various types of bad smells in code. Bad smells are indicators of potential issues in software code, and this project aims to automate their detection using semantic web technologies and Sparql queries.
 
+## Tech Stack
+
+- Python
+- Java
+- Owlready2
+- Protege
+- Sparql
+- GitHub
+- pytest
+
 ## Bad Smell Types
 
 The project addresses the following types of bad smells:
